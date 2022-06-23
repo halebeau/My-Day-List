@@ -4,4 +4,4 @@
 
 #### HTML, CSS, Javascript only. 
 
-<img width="837" alt="Screen Shot 2022-06-19 at 8 39 14 PM" src="https://user-images.githubusercontent.com/52841881/174510782-294e0fb4-4dfa-476c-a7b9-8ed79b2ff9d9.png">
+<img width="745" alt="Screen Shot 2022-06-23 at 4 54 21 PM" src="https://user-images.githubusercontent.com/52841881/175415832-d7437a99-cc61-455d-bffd-99139efae2cf.png">
