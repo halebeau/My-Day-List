@@ -1,15 +1,16 @@
 const btnCreate = document.querySelector('.btn-main')
 const btnToggle = document.querySelector('.btn-toggle')
-
+const btnRemove = document.querySelector('.btn-remove')
 
 btnCreate.addEventListener("click", () => {
   const input = document.querySelector(".input-main")
   const list = document.querySelector('ul')
-  const item = document.createElement('li')
-  
-  item.textContent = input.value
+
+  list.insertAdjacentHTML(
+    'afterbegin',
+    `<li>${input.value}</li>`
+  )
   input.value = ""
-  list.prepend(item)
 })
 
 btnToggle.addEventListener("click", () => {
@@ -22,4 +23,9 @@ btnToggle.addEventListener("click", () => {
     btnToggle.textContent = "Show List"
     listContainer.style.display = 'none'
   }
+})
+
+btnRemove.addEventListener('click', () => {
+  const lastItem = document.querySelector('li:last-child')
+  lastItem.remove()
 })
