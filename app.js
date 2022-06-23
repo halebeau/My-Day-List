@@ -1,16 +1,15 @@
-const btnUpdate = document.querySelector('.btn-main')
+const btnCreate = document.querySelector('.btn-main')
 const btnToggle = document.querySelector('.btn-toggle')
 
 
-btnUpdate.addEventListener("click", () => {
-  const headline = document.getElementById('headline')
-  const input = document.querySelector('.input-main')
-  btnUpdate.style.backgroundColor = "#1bc44b"
-  btnUpdate.textContent = "Updated"
-
-  headline.className = 'grow'
-  headline.textContent = input.value
-  input.value = ''
+btnCreate.addEventListener("click", () => {
+  const input = document.querySelector(".input-main")
+  const list = document.querySelector('ul')
+  const item = document.createElement('li')
+  
+  item.textContent = input.value
+  input.value = ""
+  list.prepend(item)
 })
 
 btnToggle.addEventListener("click", () => {
