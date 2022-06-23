@@ -1,11 +1,14 @@
 const btnUpdate = document.querySelector(".btn-main")
 const btnHide = document.querySelector("#btn-toggle")
-const items = document.querySelectorAll('li')
 
 
 btnUpdate.addEventListener("click", () => {
+  const headline = document.getElementById('headline')
+  const input = document.querySelector('.input-main')
   btnUpdate.style.backgroundColor = "#1bc44b"
   btnUpdate.textContent = "Updated"
+  headline.textContent = input.value
+  input.value = ''
 })
 
 btnHide.addEventListener('click', () => {
@@ -13,10 +16,6 @@ btnHide.addEventListener('click', () => {
   btnHide.style.color = 'grey'
   btnHide.textContent = "Hidden"
 })
-
-for (let i=0; i < items.length; i++) {
-  items[i].style.color = 'lime'
-}
 
 
 
