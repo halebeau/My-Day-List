@@ -1,6 +1,14 @@
 const btnCreate = document.querySelector('.btn-main')
 const btnToggle = document.querySelector('.btn-toggle')
 const btnRemove = document.querySelector('.btn-remove')
+const taskList = document.querySelector('.list-container ul')
+const listItems = document.getElementsByTagName('li')
+
+for(let i=0; i < listItems.length; i++) {
+  listItems[i].addEventListener('mouseover', () => {
+    listItems[i].textContent = listItems[i].textContent.toUpperCase()
+  })
+}
 
 btnCreate.addEventListener("click", () => {
   const input = document.querySelector(".input-main")
