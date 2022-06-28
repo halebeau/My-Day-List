@@ -11,15 +11,17 @@ function attachRemoveButton(li) {
   remove.textContent = "Remove"
   li.appendChild(remove)
 }
-for( let i = 0; i < listItems.length; i++ ) {
+for (let i=0; i < listItems.length; i++) {
   attachRemoveButton(listItems[i])
 }
 
-  // taskList.addEventListener('mouseover', (event) => {
-  //   if( event.target.tagName === 'LI' ) {
-  //     event.target.textContent = event.target.textContent.toUpperCase()      
-  //   }
-  // })
+  taskList.addEventListener('click', (event) => {
+    if (event.target.tagName === 'BUTTON') {
+      const button = event.target
+      const li = button.parentNode
+      li.remove()
+    }
+  })
 
 btnToggle.addEventListener("click", () => {
   const listContainer = document.querySelector(".list-container")
@@ -40,9 +42,4 @@ btnCreate.addEventListener("click", () => {
   attachRemoveButton(li)
   ul.appendChild(li)
   input.value = ""
-})
-
-btnRemove.addEventListener('click', () => {
-  const lastItem = document.querySelector('li:last-child')
-  lastItem.remove()
 })
