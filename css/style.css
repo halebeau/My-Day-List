@@ -122,6 +122,10 @@ button:focus {
 .btn-toggle:hover {
   background-color: var(--color-hide-dark);
 }
+.remove {
+  border-radius: .2em;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
 .btn-remove {
   color: white;
   padding: 0.85em 1em;
